@@ -3,21 +3,21 @@
   <head>
     <meta charset="utf-8">
     <title>User Directory Project</title>
-    <link rel="stylesheet" href="/public/main.css">
+    <link rel="stylesheet" href="main.css">
   </head>
   <body>
     <main class="container">
       {{#users}}
       <div class="each-user">
         <div class="avatar-img">
-          <img class="images" src="{{avatar}}" alt="avatar">
+          <a class="click-me" href="#"><img class="images" src="{{avatar}}" alt="avatar"></a>
         </div>
         <div class="avatar-name">
           <h3>{{name}}</h3>
         </div>
         <div class="current-pos">
-          <p>{{job}}</p>
-          <p>{{company}}</p>
+          <p>{{job}}{{^job}}{{/job}}</p>
+          <p>{{company}}{{^company}}<p class="avail">Available for hire</p>{{/company}}</p>
         </div>
       </div>
       {{/users}}

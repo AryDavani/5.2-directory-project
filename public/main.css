@@ -2,15 +2,36 @@
   box-sizing: border-box;
 }
 body {
-  background-color: black;
+  font-family: 'Helvetica';
 }
 .container {
   display: flex;
+  flex-wrap: wrap;
+  background-color: black;
+  justify-content: flex-start;
+  padding: 5px;
 }
 .each-user {
-  padding: 5px;
-  flex: 1 1 20%;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid black;
+  padding: 10px;
+  flex-basis: 15%;
+  margin: 10px;
 }
 .images {
-  width: 100%;
+  width: 90%;
+  height: 100px;
+}
+.avatar-name {
+  text-align: center;
+  color: #337BCD;
+}
+.current-pos {
+  color: gray;
+  font-size: 14px;
+  text-align: center;
+}
+.avail {
+  color: red;
 }
