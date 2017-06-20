@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>User Details</title>
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <div class="container-details">
+      <div class="sect-1">
+        <div class="img-div">
+          <img src="{{avatar}}" alt="avatar">
+        </div>
+        <div class="">
+          <h1>{{name}}</h1>
+          <p>{{country}} | {{company}}{{^company}}Available for hire{{/company}}</p>
+          <p>{{email}} | {{phone}}</p>
+        </div>
+      </div>
+      <div class="sect-2">
+        <strong>Education</strong>
+        <p>{{education}}</p>
+        <strong>Skills</strong>
+        <p>{{skills}}</p>
+      </div>
+    </div>
+  </body>
+</html>
