@@ -1,0 +1,16 @@
+*{
+  box-sizing: border-box;
+}
+body {
+  background-color: black;
+}
+.container {
+  display: flex;
+}
+.each-user {
+  padding: 5px;
+  flex: 1 1 20%;
+}
+.images {
+  width: 100%;
+}
