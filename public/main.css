@@ -4,6 +4,10 @@
 body {
   font-family: 'Helvetica';
 }
+.heading {
+  margin: 0 auto;
+  text-align: center;
+}
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -12,8 +16,8 @@ body {
   padding: 5px;
 }
 .each-user {
-  background-color: white;
-  border-radius: 5px;
+  background-color: rgb(255, 250, 242);
+  border-radius: 4px;
   border: 1px solid black;
   padding: 10px;
   flex-basis: 15%;
@@ -21,7 +25,7 @@ body {
 }
 .images {
   width: 90%;
-  height: 100px;
+  height: 140px;
 }
 .avatar-name {
   text-align: center;
@@ -34,4 +38,37 @@ body {
 }
 .avail {
   color: red;
+}
+.img-div {
+  border: 1px solid gray;
+  border-radius: 50%;
+}
+.sect-1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 90px;
+
+}
+.sect-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.inline {
+  display: flex;
+  align-items: center;
+}
+.info {
+  margin-left: 20px;
+}
+
+strong {
+  margin-right: 10px;
+}
+.blue {
+  color: #337BCD;
+}
+.move-left {
+  margin-left: 5px;
 }

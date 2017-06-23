@@ -3,25 +3,36 @@
   <head>
     <meta charset="utf-8">
     <title>User Details</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="/static/main.css">
   </head>
   <body>
+    <div class="heading">
+      <h1>User Details</h1>
+    </div>
     <div class="container-details">
       <div class="sect-1">
-        <div class="img-div">
-          <img src="{{avatar}}" alt="avatar">
+        <div>
+          <img class="img-div" src="{{avatar}}" alt="avatar">
         </div>
-        <div class="">
-          <h1>{{name}}</h1>
-          <p>{{address.city}}, {{address.country}} | {{company}}{{^company}}Available for hire{{/company}}</p>
+        <div class="info">
+          <h1 class="blue">{{name}}</h1>
+          <div class="inline">
+            <p>{{address.city}}, {{address.country}} | {{company}}{{^company}}<p class="avail move-left">Available for hire</p>{{/company}}</p>
+          </div>
           <p>{{email}} | {{phone}}</p>
         </div>
       </div>
       <div class="sect-2">
-        <strong>Education</strong>
-        <p>{{education}}</p>
-        <strong>Skills</strong>
-        <p>{{skills}}</p>
+        <div class="inline">
+          <strong>Education</strong>
+          <p>{{university}}</p>
+        </div>
+        <div class="inline">
+          <strong>Skills</strong>
+          <div class="column">
+            <p>{{skills}}, </p>
+          </div>
+        </div>
       </div>
     </div>
   </body>
