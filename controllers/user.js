@@ -25,5 +25,15 @@ module.exports = {
         res.render('details', context);
       });
     });
-  }
+
+  },
+  available: function(req, res) {
+    let context = {};
+    MongoClient.connect('mongodb://localhost:27017/imLostdb', function(error, db) {
+      const col = db.collection('users');
+      col.find({"company":null}).toArray(function(error, results) {
+        context.results = results;
+        res.render('available', context);
+      });
+    });
 };
