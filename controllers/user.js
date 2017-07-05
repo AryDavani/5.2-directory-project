@@ -21,7 +21,6 @@ module.exports = {
 
       col.find({"id": userID }).toArray(function(error, results) {
         context.results = results;
-        console.log(context);
         res.render('details', context);
       });
     });
@@ -29,11 +28,19 @@ module.exports = {
   },
   available: function(req, res) {
     let context = {};
+    console.log("hello");
+
     MongoClient.connect('mongodb://localhost:27017/imLostdb', function(error, db) {
       const col = db.collection('users');
-      col.find({"company":null}).toArray(function(error, results) {
+      console.log("hello");
+
+      col.find({company: null }).toArray(function(error, results) {
+        console.log(results);
         context.results = results;
+        console.log('working?');
         res.render('available', context);
       });
     });
+
+  }
 };
