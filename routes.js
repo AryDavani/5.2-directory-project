@@ -4,4 +4,5 @@ module.exports = function(app){
     app.get('/directory', Controllers.index);
     app.get('/directory/:id', Controllers.details);
     app.get('/available', Controllers.available);
+    app.get('/employed', Controllers.employed);
   };

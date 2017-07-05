@@ -2,10 +2,12 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Robots - Home</title>
+    <title>Robots - Employed</title>
     <link rel="stylesheet" href="/static/main.css">
   </head>
   <body>
+
+
     <div class="heading">
       <a href="/directory"><h3>All Robots</h3></a>
       <a href="/available"><h3>Available</h3></a>
@@ -15,7 +17,7 @@
       {{#results}}
       <div class="each-user">
         <div class="avatar-img">
-          <a class="click-me" href="directory/{{id}}"><img class="images" src="{{avatar}}" alt="avatar"></a>
+          <img class="images" src="{{avatar}}" alt="avatar">
         </div>
         <div class="avatar-name">
           <h3>{{name}}</h3>

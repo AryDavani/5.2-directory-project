@@ -28,17 +28,26 @@ module.exports = {
   },
   available: function(req, res) {
     let context = {};
-    console.log("hello");
 
     MongoClient.connect('mongodb://localhost:27017/imLostdb', function(error, db) {
       const col = db.collection('users');
-      console.log("hello");
 
       col.find({company: null }).toArray(function(error, results) {
-        console.log(results);
         context.results = results;
-        console.log('working?');
         res.render('available', context);
+      });
+    });
+
+  },
+  employed: function(req, res) {
+    let context = {};
+
+    MongoClient.connect('mongodb://localhost:27017/imLostdb', function(error, db) {
+      const col = db.collection('users');
+
+      col.find({company: {$ne : null} }).toArray(function(error, results) {
+        context.results = results;
+        res.render('employed', context);
       });
     });
 

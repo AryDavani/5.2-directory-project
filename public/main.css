@@ -7,6 +7,8 @@ body {
 .heading {
   margin: 0 auto;
   text-align: center;
+  display: flex;
+  justify-content: space-around;
 }
 .container {
   display: flex;
